@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Cal Poly Study Timer</title>
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="todolist.css">
+  <link rel="stylesheet" href="music.css">
+
+</head>
+
+<body>
+    <div id="nav">
+      <h2>Study Timer</h2>
+      <h3 onclick="setTime(25, 00)">Study Time</h3>
+      <h3 onclick="setTime(05, 00)">Short Break</h3>
+      <h3 onclick="setTime(15, 00)">Long Break</h3>
+    </div>
+    <div id="safeTimer">
+        <h1 id="safeTimerDisplay" contenteditable="true">25:00</h1>
+        <div class="buttons">
+            <button id="Button">Start</button>
+        </div>
+    </div>
+    <div id="bottom-row">
+        <div id="todolist">
+          <h2 id="todohead">To Do List</h2>
+          <div id="newTask">
+            <input type="text" id="myInput" placeholder="Enter Task...">
+            <span onclick="newElement()" class="addBtn">Add</span>
+          </div>
+          <ul id="myUL">
+          </ul>
+        </div>
+        <div id="music">
+            <div class="row">
+              <div class="column" onclick="openTab('b1');" style="background:#C0ABD3;">
+                JAZZ &#127927;
+              </div>
+              <div class="column" onclick="openTab('b2');" style="background:#99BDCC;">
+                LOFI &#9749;
+              </div>
+              <div class="column" onclick="openTab('b3');" style="background:#B6CC99;">
+                RAIN &#127783;
+              </div>
+            </div>
+            <div id="b1" class="containerTab" style="display:none;background:#C0ABD3;border-radius:5px;">
+              <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+              <h2>JAZZ &#127927</h2>
+              <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWV7EzJMK2FUI?utm_source=generator" width="150%" height="350" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>
+              
+             <div id="b2" class="containerTab" style="display:none;background:#99BDCC;border-radius:5px;">
+              <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+              <h2>LOFI &#9749</h2>
+              <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn?utm_source=generator" width="150%" height="350" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+             </div>
+              
+             <div id="b3" class="containerTab" style="display:none;background:#B6CC99;border-radius:5px;">
+              <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+              <h2>RAIN &#127783</h2>
+              <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX8ymr6UES7vc?utm_source=generator" width="150%" height="350" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+             </div>
+        </div>
+    </div>
+  <br>
+  <!-- your content here... -->
+  <script src="scripts.js"></script>
+  <script src="todolist.js"></script>
+</body>
+</html>
